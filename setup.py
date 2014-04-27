@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from setuptools import setup
-from djangocms_column import __version__
+from djangocms_carousel import __version__
 
 
 INSTALL_REQUIRES = [
@@ -24,13 +24,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='djangocms-slider',
+    name='djangocms-carousel',
     version=__version__,
     description='Slider Plugin for django CMS',
     author='Andrew Mirsky',
     author_email='andrew@mirsky.net',
-    url='https://github.com/divio/djangocms-slider',
-    packages=['djangocms_slider', 'djangocms_slider.migrations'],
+    url='https://git.mirsky.net/mirskyconsulting/djangocms-carousel',
+    packages=['djangocms_carousel', 'djangocms_carousel.migrations'],
     install_requires=INSTALL_REQUIRES,
     license='LICENSE.txt',
     platforms=['OS Independent'],

@@ -12,7 +12,7 @@ class CarouselPlugin(CMSPluginBase):
     render_template = "cms/plugins/carousel.html"
     allow_children = True
     child_classes = ["CarouselPlugin"]
-    form = SliderForm
+    form = CarouselForm
 
     def render(self, context, instance, placeholder):
         context.update({
@@ -22,7 +22,7 @@ class CarouselPlugin(CMSPluginBase):
         return context
 
     def save_model(self, request, obj, form, change):
-        response = super(SliderPlugin, self).save_model(request, obj, form, change)
+        response = super(CarouselPlugin, self).save_model(request, obj, form, change)
         for x in xrange(int(form.cleaned_data['create'])):
             col = Slide(parent=obj, placeholder=obj.placeholder, language=obj.language, position=CMSPlugin.objects.filter(parent=obj).count(), plugin_type=SlidePlugin.__name__)
             col.save()

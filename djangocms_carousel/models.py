@@ -17,5 +17,5 @@ class Slide(CMSPlugin):
     """
 
     def __unicode__(self):
-        return u"%s" % self.get_width_display()
+        return u"Slide %s" % self.pk
 

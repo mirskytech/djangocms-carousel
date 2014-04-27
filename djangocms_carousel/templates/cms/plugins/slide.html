@@ -1,6 +1,9 @@
 {% load cms_tags %}
-<div class="column" style="width: {{ instance.width }}; float: left;">
-{% for plugin in instance.child_plugin_instances %}
-    	{% render_plugin plugin %}
-{% endfor %}
+<div class="item {% if forloop.first %}active{% endif %}">
+  <div>
+    {% for plugin in instance.child_plugin_instances %}
+	  {% render_plugin plugin %}
+    {% endfor %}
+  </div>
+  <div class="carousel-caption">...</div>
 </div>

@@ -1,5 +1,5 @@
 from django import forms
-from djangocms_slide.models import Carousel
+from djangocms_carousel.models import Carousel
 from django.utils.translation import ugettext_lazy as _
 
 class CarouselForm(forms.ModelForm):
@@ -17,9 +17,9 @@ class CarouselForm(forms.ModelForm):
     )
 
 
-    create = forms.ChoiceField(choices=NUM_SLIDE, label=_("Create Carousel"), help_text=_("Create this number of slides"))
+    create = forms.ChoiceField(choices=NUM_SLIDES, label=_("Create Carousel"), help_text=_("Create this number of slides"))
 
 
     class Meta:
-        model = Slider
+        model = Carousel
         exclude = ('page', 'position', 'placeholder', 'language', 'plugin_type')

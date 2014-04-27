@@ -1,0 +1,10 @@
+*.log
+*.pot
+*.pyc
+.project
+.pydevproject
+.settings
+build
+env*
+dist
+djangocms_slider.egg-info

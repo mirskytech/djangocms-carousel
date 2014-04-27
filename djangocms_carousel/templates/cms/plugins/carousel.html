@@ -1,0 +1,24 @@
+{% load cms_tags %}
+<div id="carousel-{{ instance.pk }}" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+	{% for plugin in instance.child_plugin_instances %}
+	  <li data-target="#carousel-{{ instance.pk }}" data-slide-to="{{ forloop.counter }}"{% if forloop.first %} class="active"{% endfor %}></li>
+    	{% render_plugin plugin %}	
+	{% endfor %}
+  </ol>
+  <div class="carousel-inner">
+  	{% for plugin in instance.child_plugin_instances %}
+    	{% render_plugin plugin %}	
+	{% endfor %}
+  </div>
+  
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-{{ instance.pk }}" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-{{ instance.pk }}" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+  
+</div>

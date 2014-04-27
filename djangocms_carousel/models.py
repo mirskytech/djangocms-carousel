@@ -17,5 +17,5 @@ class Slide(CMSPlugin):
     """
 
     def __unicode__(self):
-        return u"Slide %s" % self.pk
+        return u"Slide %s" % self.get_position_in_placeholder()
 

@@ -3,7 +3,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
 	{% for plugin in instance.child_plugin_instances %}
-	  <li data-target="#carousel-{{ instance.pk }}" data-slide-to="{{ forloop.counter }}"{% if forloop.first %} class="active"{% endif %}></li>
+	  <li data-target="#carousel-{{ instance.pk }}" data-slide-to="{{ forloop0.counter }}"{% if forloop.first %} class="active"{% endif %}></li>
 	{% endfor %}
   </ol>
   <div class="carousel-inner">
